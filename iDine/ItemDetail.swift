@@ -29,10 +29,23 @@ struct ItemDetail: View {
             Button("Order This") {
                 self.order.add(item: self.item)
             }.font(.headline)
+               // .font(.bold)
+            .padding(10)
+            .background(Color.purple)
+            .cornerRadius(40)
+            //.padding()
+            .foregroundColor(.white)
+            //.padding()
+            //.border(Color.purple, width: 5)
+            .padding(10)
+                .overlay(RoundedRectangle(cornerRadius: 40)
+                    .stroke(Color.purple, lineWidth: 5))
+            
             
             Spacer()
             
         }.navigationBarTitle(Text(item.name), displayMode: .inline)
+        
     }
 }
 
